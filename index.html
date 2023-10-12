@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<title>Lista de tarefas</title>
+	</head>
+	<body>
+		<div id="modal" class="esconder">
+			<div id="modal-wrapper">
+				<div id="conteudo-modal">
+					<div id="cabecalho-modal">
+						<button onclick="fecharModal()"><i class="fa fa-close" style="color: red;"></i></button>
+					</div>
+					<h3 id="titulo-modal"></h3>
+					<label id="label-input-modal" for="input-modal">Descrição Tarefa:</label>
+					<input id="input-modal" type="text" placeholder="">
+					<button id="botao-modal" onclick="executarAcaoModal()"></button>
+				</div>
+			</div>
+		</div>
+		<header>
+			<h1>Lista de tarefas</h1>
+			<button id="botao-adicionar-tarefa" onclick="abrirModal('adicionar')">Adicionar Tarefa</button>
+		</header>
+		<main>
+			<div id="lista-de-tarefas">
+			</div>
+		</main>
+		<footer>
+			Guilherme Bueno &copy; 2023
+		</footer>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
