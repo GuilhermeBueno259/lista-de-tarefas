@@ -1,4 +1,3 @@
-// window.localStorage.clear();
 Object.values(window.localStorage).forEach((tarefa) => {
 	tarefa = JSON.parse(tarefa);
 	carregarCardTarefa(tarefa);
@@ -16,6 +15,12 @@ function carregarCardTarefa(tarefa) {
 	let paragrafoTextoTarefa = document.createElement('p');
 	paragrafoTextoTarefa.setAttribute('id', `paragrafo-texto-tarefa-${tarefa.numero}`);
 	paragrafoTextoTarefa.innerHTML = tarefa.descricao;
+
+	if (tarefa.concluida) {
+		paragrafoTextoTarefa.style.textDecoration = 'line-through';
+		paragrafoTextoTarefa.style.color = '#888';
+		checkboxTarefaConcluida.setAttribute('checked', true);
+	}
 
 	let divBotoes = document.createElement('div');
 
